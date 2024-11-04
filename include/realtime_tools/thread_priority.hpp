@@ -32,7 +32,9 @@
 #include "realtime_tools/realtime_helpers.hpp"
 
 // Deprecation notice
+#ifdef UNIX
 #warning \
   "This header include is deprecated. Please update your code to use 'realtime_helpers.hpp' header and link against 'realtime_tools' library." //NOLINT
+#endif
 
 #endif  // REALTIME_TOOLS__THREAD_PRIORITY_HPP_
