@@ -221,7 +221,7 @@ public:
    * @note Overload to allow setting pointer types to nullptr directly.
    */
   template <typename U = T>
-  typename std::enable_if_t<is_ptr_or_smart_ptr<U>, void> set(std::nullptr_t)
+  typename std::enable_if_t<is_ptr_or_smart_ptr<U>, void> void set(std::nullptr_t)
   {
     std::lock_guard<mutex_t> guard(lock_);
     value_ = nullptr;
